@@ -1,217 +1,216 @@
 <!doctype html>
 <meta charset="utf-8" />
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 250px;
-		width: 400px;
-		box-sizing: border-box;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
+  #mainPopup {
+    padding: 10px;
+    height: 250px;
+    width: 400px;
+    box-sizing: border-box;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+  }
 
-	.css-header {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-	}
+  .css-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-	.css-item {
-		display: flex;
-		flex: 1;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-	}
+  .css-item {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-	.css-keys, .css-keys-nomargin {
-		font-weight: bold;
-		font-size: 18px;
-		color: #333;
-	}
+  .css-keys, .css-keys-nomargin {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
 
-	.css-keys-nomargin {
-		margin: 0px;
-	}
+  .css-keys-nomargin {
+    margin: 0px;
+  }
 
-	.css-normal-value {
-		margin-left: 20px;
-		font-size: 16px;
-		color: #333;
-	}
+  .css-normal-value {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+  }
 
-	.css-valuables {
-		margin-top: 0px;
-		margin-bottom: 0px;
-		margin-left: 20px;
-		font-size: 18px;
-		color: #697CD9;
-	}
+  .css-valuables {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #697CD9;
+  }
 
-	.css-drop-icon {
-		width: 49px;
-		height: 49px;
-	}
+  .css-drop-icon {
+    width: 49px;
+    height: 49px;
+  }
 
-	.css-divivd {
-		width: 100%;
-		height: 1px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		background-color: #666;
-	}
+  .css-divivd {
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #666;
+  }
 
-	.css-btns-div {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-		padding-bottom: 20px;
-		padding-top: 10px;
-		box-sizing: border-box;
-	}
+  .css-btns-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
 
-	.css-btn {
-		margin-left: 10px;
-		margin-right: 10px;
-		font-size: 18px;
-		color: red;
-	}
+  .css-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: red;
+  }
 
-	.css-container {
-		margin-top: 18px;
-		margin-bottom: 18px;
-	}
+  .css-container {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
 </style>
 
 <div id="mainPopup">
-	<!-- 大巴 -->
-	<div class="css-header">
-		<div class="css-item">
-			<p class="css-keys">大巴青箱:</p>
-			<p class="css-valuables" id="blue-chest"></p>
-		</div>
-		<div class="css-item">
-			<p class="css-keys">落空:</p>
-			<p class="css-valuables" id="no-blue-chest"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
-			<p class="css-valuables" id="ffj"></p>
-		</div>
-	</div>
-	<div class="css-header">
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_1.jpeg">
-			<p class="css-normal-value" id="white-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_2.jpeg">
-			<p class="css-normal-value" id="blue-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_3.jpeg">
-			<p class="css-valuables" id="red-ring"></p>
-		</div>
-	</div>
-	<div class="css-container">
-		<div class="css-item">
-			<p class="css-keys-nomargin">蓝箱率:</p>
-			<p class="css-valuables" id="bluechest-rate"></p>
-		</div>
-		<div class="css-item">
-			<p class="css-keys-nomargin">距离上次出金，打了多少蓝:</p>
-			<p class="css-valuables" id="un-hit"></p>
-		</div>
-	</div>
-	<div class="css-divivd"></div>
-	<!-- akx -->
-	<div class="css-header">
-		<div class="css-item">
-			<p class="css-keys">akx青箱:</p>
-			<p class="css-valuables" id="akx-blue-chest"></p>
-		</div>
-		<div class="css-item"></div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
-			<p class="css-valuables" id="akx-ffj"></p>
-		</div>
-	</div>
-	<div class="css-header">
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_1.jpeg">
-			<p class="css-normal-value" id="akx-white-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_2.jpeg">
-			<p class="css-normal-value" id="akx-blue-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_3.jpeg">
-			<p class="css-valuables" id="akx-red-ring"></p>
-		</div>
-	</div>
-	<div class="css-item">
-		<p class="css-keys">距离上次出金，打了多少蓝:</p>
-		<p class="css-valuables" id="akx-un-hit"></p>
-	</div>
-	<div class="css-divivd"></div>
-	<!-- 大公 -->
-	<div class="css-header">
-		<div class="css-item">
-			<p class="css-keys">大公青箱:</p>
-			<p class="css-valuables" id="grande-blue-chest"></p>
-		</div>
-		<div class="css-item"></div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
-			<p class="css-valuables" id="grande-ffj"></p>
-		</div>
-	</div>
-	<div class="css-header">
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_1.jpeg">
-			<p class="css-normal-value" id="grande-white-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_2.jpeg">
-			<p class="css-normal-value" id="grande-blue-ring"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_3.jpeg">
-			<p class="css-valuables" id="grande-red-ring"></p>
-		</div>
-	</div>
-	<div class="css-item">
-		<p class="css-keys">距离上次出金，打了多少蓝:</p>
-		<p class="css-valuables" id="grande-un-hit"></p>
-	</div>
-	<div class="css-divivd"></div>
-	<!-- cb -->
-	<div class="css-header"  style="display: none;">
-		<div class="css-item">
-			<p class="css-keys">超巴:</p>
-			<p class="css-valuables" id="cb-chest"></p>
-		</div>
-		<div class="css-item">
-			<img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
-			<p class="css-valuables" id="cb-ffj"></p>
-		</div>
-	</div>
+  <!-- 大巴 -->
+  <div class="css-header">
+    <div class="css-item">
+      <p class="css-keys">大巴青箱:</p>
+      <p class="css-valuables" id="blue-chest"></p>
+    </div>
+    <div class="css-item">
+      <p class="css-keys">落空:</p>
+      <p class="css-valuables" id="no-blue-chest"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
+      <p class="css-valuables" id="ffj"></p>
+    </div>
+  </div>
+  <div class="css-header">
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_1.jpeg">
+      <p class="css-normal-value" id="white-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_2.jpeg">
+      <p class="css-normal-value" id="blue-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_3.jpeg">
+      <p class="css-valuables" id="red-ring"></p>
+    </div>
+  </div>
+  <div class="css-container">
+    <div class="css-item">
+      <p class="css-keys-nomargin">蓝箱率:</p>
+      <p class="css-valuables" id="bluechest-rate"></p>
+    </div>
+    <div class="css-item">
+      <p class="css-keys-nomargin">距离上次出金，打了多少蓝:</p>
+      <p class="css-valuables" id="un-hit"></p>
+    </div>
+  </div>
+  <div class="css-divivd"></div>
+  <!-- akx -->
+  <div class="css-header">
+    <div class="css-item">
+      <p class="css-keys">akx青箱:</p>
+      <p class="css-valuables" id="akx-blue-chest"></p>
+    </div>
+    <div class="css-item"></div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
+      <p class="css-valuables" id="akx-ffj"></p>
+    </div>
+  </div>
+  <div class="css-header">
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_1.jpeg">
+      <p class="css-normal-value" id="akx-white-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_2.jpeg">
+      <p class="css-normal-value" id="akx-blue-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_3.jpeg">
+      <p class="css-valuables" id="akx-red-ring"></p>
+    </div>
+  </div>
+  <div class="css-item">
+    <p class="css-keys">距离上次出金，打了多少蓝:</p>
+    <p class="css-valuables" id="akx-un-hit"></p>
+  </div>
+  <div class="css-divivd"></div>
+  <!-- 大公 -->
+  <div class="css-header">
+    <div class="css-item">
+      <p class="css-keys">大公青箱:</p>
+      <p class="css-valuables" id="grande-blue-chest"></p>
+    </div>
+    <div class="css-item"></div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
+      <p class="css-valuables" id="grande-ffj"></p>
+    </div>
+  </div>
+  <div class="css-header">
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_1.jpeg">
+      <p class="css-normal-value" id="grande-white-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_2.jpeg">
+      <p class="css-normal-value" id="grande-blue-ring"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_3.jpeg">
+      <p class="css-valuables" id="grande-red-ring"></p>
+    </div>
+  </div>
+  <div class="css-item">
+    <p class="css-keys">距离上次出金，打了多少蓝:</p>
+    <p class="css-valuables" id="grande-un-hit"></p>
+  </div>
+  <div class="css-divivd"></div>
+  <!-- cb -->
+  <div class="css-header"  style="display: none;">
+    <div class="css-item">
+      <p class="css-keys">超巴:</p>
+      <p class="css-valuables" id="cb-chest"></p>
+    </div>
+    <div class="css-item">
+      <img class="css-drop-icon" src="../../icons/icon_20004.jpeg">
+      <p class="css-valuables" id="cb-ffj"></p>
+    </div>
+  </div>
 
-	<div class="css-item" style="display:none;">
-		<p class="css-keys">历史记录:</p>
-		<p class="css-normal-value" id="hit-array"></p>
-	</div>
+  <div class="css-item" style="display:none;">
+    <p class="css-keys">历史记录:</p>
+    <p class="css-normal-value" id="hit-array"></p>
+  </div>
 
-	<div id="resetCounter" class="css-btns-div">
-		<button class="css-btn">重置大巴蓝箱</button>
-		<button class="css-btn">重置akx蓝箱</button>
-		<button class="css-btn" style="display: none;">重置cb</button>
-		<button class="css-btn">重置大公蓝箱</button>
-	</div>
+  <div id="resetCounter" class="css-btns-div">
+    <button class="css-btn">重置大巴蓝箱</button>
+    <button class="css-btn">重置akx蓝箱</button>
+    <button class="css-btn" style="display: none;">重置cb</button>
+    <button class="css-btn">重置大公蓝箱</button>
+  </div>
 </div>
-
 
 
 <script src="browser_action.js"></script>
